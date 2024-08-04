@@ -63,9 +63,14 @@ section {
 /* Home Section Styles */
 .home-section {
     background: url('https://picsum.photos/1920/1080') no-repeat center center/cover;
-    color: #fff;
+    color: #fff; /* Set default text color to white */
     text-align: center;
     padding: 100px 20px;
+}
+
+.home-section h1, 
+.home-section p {
+    color: #fff; /* Ensure text color is white */
 }
 
 /* About Section Styles */
@@ -139,36 +144,6 @@ section {
     background-color: #e6b800;
 }
 
-/* Contact Section Styles */
-.contact-section {
-    background-color: #fff;
-    text-align: center;
-}
+/* Co
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        display: none;
-        width: 100%;
-        background-color: #333;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .about-section .row {
-        flex-direction: column;
-    }
-
-    .about-section .about-image {
-        order: -1;
-    }
-}
 
