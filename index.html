@@ -3,25 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Navigation Menu</title>
+    <title>Responsive Travel Landing Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="brand">ProDigy Infotech</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <section id="home">Home Section</section>
-        <section id="about">About Section</section>
-        <section id="services">Services Section</section>
-        <section id="contact">Contact Section</section>
-    </div>
+    <header class="navbar">
+        <div class="brand">Travel Tales</div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#discover">Discover</a>
+            <a href="#features">Features</a>
+            <a href="#signup">Sign Up</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="home-section" style="background: url('https://picsum.photos/1920/1080') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Welcome to Travel Tales</h1>
+                <p>Your Gateway to Unforgettable Adventures</p>
+            </div>
+        </section>
+
+        <section id="discover" class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 about-content">
+                        <h2>Discover Your Next Destination</h2>
+                        <p>Travel Tales is your ultimate travel app, offering a seamless way to explore new destinations and activities tailored to your preferences.</p>
+                        <ul>
+                            <li>Uncover hidden gems and popular spots</li>
+                            <li>Plan and book your trips effortlessly</li>
+                            <li>Get recommendations from experienced travelers</li>
+                            <li>Keep your itineraries organized</li>
+                            <li>Receive real-time travel updates</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 about-image">
+                        <img src="https://picsum.photos/600/400" alt="Travel App Graphic">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="services-section">
+            <div class="container">
+                <h2>Our Features</h2>
+                <ul>
+                    <li>In-depth destination guides</li>
+                    <li>Easy flight and hotel bookings</li>
+                    <li>Comprehensive trip planning tools</li>
+                    <li>User reviews and ratings</li>
+                    <li>Personalized travel suggestions</li>
+                    <li>Instant notifications and alerts</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="signup" class="register-section">
+            <div class="container">
+                <h2>Join Us Today</h2>
+                <form name="contentForm" enctype="multipart/form-data" method="post" action="/resources/case-studies/are-you-part-of-the-app-majoritya-.stml">
+                    <div class="form-group">
+                        <label for="firstName">First Name <span class="asterisk">*</span></label>
+                        <input type="text" name="formfields[firstName]" id="firstName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span class="asterisk">*</span></label>
+                        <input type="text" name="formfields[lastName]" id="lastName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddress">Email <span class="asterisk">*</span></label>
+                        <input type="email" name="formfields[emailAddress]" id="emailAddress" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Phone Number <span class="asterisk">*</span></label>
+                        <input type="tel" name="formfields[title]" id="title" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyName">Address <span class="asterisk">*</span></label>
+                        <input type="text" name="formfields[companyName]" id="companyName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Date of Birth</label>
+                        <input type="date" name="formfields[phoneNumber]" id="phoneNumber" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Confirm Registration</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>Have questions? Contact us at support@traveltales.com</p>
+            </div>
+        </section>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
+
