@@ -1,20 +1,23 @@
+/* General Styles */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
 }
 
+/* Navbar Styles */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #333;
-    color: white;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
+    padding: 15px 30px;
+    transition: background-color 0.3s ease;
     z-index: 1000;
 }
 
@@ -24,30 +27,148 @@ body, html {
 
 .brand {
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
     gap: 20px;
 }
 
 .nav-links a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-    font-size: 1em;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #ffcc00;
 }
 
-.content {
-    padding-top: 60px; /* Ensure content is below the fixed navbar */
+/* Main Content Styles */
+.main-content {
+    padding-top: 80px;
 }
 
 section {
-    padding: 100px 20px;
-    min-height: 100vh;
+    padding: 60px 20px;
+    background-color: #f4f4f4;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Home Section Styles */
+.home-section {
+    background: url('https://picsum.photos/1920/1080') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* About Section Styles */
+.about-section {
+    background-color: #fff;
+}
+
+.about-section .about-content,
+.about-section .about-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-section .row {
+    display: flex;
+    align-items: center;
+}
+
+.about-section .about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Services Section Styles */
+.services-section {
+    background-color: #fafafa;
+}
+
+.services-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services-section li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Register Section Styles */
+.register-section {
+    background-color: #fff;
+}
+
+.register-section .form-group {
+    margin-bottom: 15px;
+}
+
+.register-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.register-section .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.register-section .btn {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.register-section .btn:hover {
+    background-color: #e6b800;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-section .row {
+        flex-direction: column;
+    }
+
+    .about-section .about-image {
+        order: -1;
+    }
+}
+
